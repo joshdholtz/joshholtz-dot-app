@@ -55,7 +55,7 @@ export default function BootSequence({ phase, onComplete }: BootSequenceProps) {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_48%_22%,rgba(245,158,11,0.12),transparent_30%),linear-gradient(180deg,rgba(39,39,42,0.35),rgba(24,24,27,0.9))]" />
           <div className="absolute inset-0 opacity-[0.045] [background-image:linear-gradient(rgba(255,255,255,0.7)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.7)_1px,transparent_1px)] [background-size:48px_48px]" />
 
-          <div className="relative w-full max-w-[720px] rounded-lg border border-zinc-700/50 bg-zinc-950/32 p-4 shadow-[0_30px_120px_rgba(0,0,0,0.45)] backdrop-blur-md sm:p-6">
+          <div className="relative w-full max-w-[720px] rounded-lg border border-zinc-700/50 bg-zinc-950/32 p-4 shadow-[0_30px_120px_rgba(0,0,0,0.45)] backdrop-blur-md sm:p-6 max-h-[calc(100dvh-2rem)] overflow-y-auto">
             <div className="boot-scan-line" />
             <div className="mb-7 flex items-center justify-between border-b border-zinc-800/70 pb-3">
               <div>
@@ -110,8 +110,8 @@ export default function BootSequence({ phase, onComplete }: BootSequenceProps) {
               </motion.div>
             </div>
 
-            <div className="min-h-[220px] space-y-1 sm:min-h-[260px]">
-              {bootMessages.slice(0, visibleCount).map((msg, index) => (
+            <div className="space-y-1 overflow-hidden">
+              {bootMessages.slice(Math.max(0, visibleCount - 7), visibleCount).map((msg, index) => (
                 <TerminalLine
                   key={index}
                   timestamp={msg.timestamp}
