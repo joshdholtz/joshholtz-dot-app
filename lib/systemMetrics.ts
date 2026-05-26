@@ -66,14 +66,26 @@ export interface SystemProcess {
 export const backgroundProcesses: SystemProcess[] = [
   {
     name: 'masking.framework',
-    detail: 'Active since age ~7. Consuming significant background CPU.',
+    detail: 'Active since early boot. Running undetected for 34 years.',
     load: '43% cpu',
+    status: 'warning',
+  },
+  {
+    name: 'burnout_recovery',
+    detail: 'February event. 3 weeks offline. Rebuild in progress.',
+    load: 'ongoing',
     status: 'warning',
   },
   {
     name: 'hyperfocusd',
     detail: 'Armed. Last trigger: Tue 11pm, ran 6h uninterrupted.',
     load: 'armed',
+    status: 'stable',
+  },
+  {
+    name: 'interest_based_scheduler',
+    detail: 'Ignoring low-interest tasks. High-interest queue: 14 items.',
+    load: 'selective',
     status: 'stable',
   },
   {
@@ -88,25 +100,13 @@ export const backgroundProcesses: SystemProcess[] = [
     load: 'active',
     status: 'warning',
   },
-  {
-    name: 'recoveryd',
-    detail: 'Isolation mode initiated. Cooling systems nominal.',
-    load: '52%',
-    status: 'stable',
-  },
-  {
-    name: 'interest_based_scheduler',
-    detail: 'Ignoring low-interest tasks. High-interest queue: 14 items.',
-    load: 'selective',
-    status: 'stable',
-  },
 ]
 
 export const architectureChecks = [
   { label: 'Standard neurotypical firmware', value: 'absent', status: 'critical' as const },
-  { label: 'AuDHD compatibility layer', value: 'detected', status: 'warning' as const },
+  { label: 'autism.kernel', value: 'primary', status: 'warning' as const },
+  { label: 'adhd.scheduler', value: 'secondary', status: 'warning' as const },
   { label: 'masking.framework', value: 'loaded @ boot', status: 'warning' as const },
-  { label: 'Interest-based scheduler', value: 'confirmed', status: 'stable' as const },
   { label: 'Previous self-model', value: 'deprecated', status: 'critical' as const },
   { label: 'Full diagnostic report', value: 'tomorrow', status: 'normal' as const },
 ]

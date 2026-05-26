@@ -3,14 +3,14 @@
 import { motion } from 'framer-motion'
 
 const topics = [
-  'AuDHD',
+  'autism',
+  'ADHD',
   'burnout',
-  'hyperfocus',
   'masking',
-  'sensory overload',
-  'context switching',
-  'recovery',
-  '34 years of debugging the wrong OS',
+  'hyperfocus',
+  'sensory processing',
+  'diagnosis at 34',
+  'rebuilding',
 ]
 
 export default function TeaserCard() {
@@ -39,17 +39,17 @@ export default function TeaserCard() {
 
           <div className="mb-5 h-px w-full bg-gradient-to-r from-amber-400/40 via-zinc-700/60 to-transparent" />
 
-          <div className="mb-6 space-y-4">
+          <div className="mb-6 space-y-3">
             <p className="text-base font-light leading-7 text-zinc-200 md:text-lg">
-              For 34 years the reports came back normal.
+              It took a full system crash to run the right diagnostics.
             </p>
             <p className="text-sm font-light leading-6 text-zinc-400 md:text-base">
-              They weren&apos;t. The diagnostics just weren&apos;t
-              running the right checks.
+              Burnout. Medication that muted the wrong signal.
+              A 4-hour neuropsychological evaluation.
+              And finally — a diagnosis that actually fit.
             </p>
-            <p className="text-sm font-light leading-6 text-zinc-400 md:text-base">
-              Tomorrow: a full system walkthrough of what was
-              actually running underneath the whole time.
+            <p className="text-sm font-light leading-6 text-zinc-500">
+              autism.kernel (primary) · adhd.scheduler (secondary)
             </p>
           </div>
 
@@ -62,6 +62,12 @@ export default function TeaserCard() {
                 {topic}
               </span>
             ))}
+          </div>
+
+          <div className="mb-4 rounded-md border border-zinc-800/60 bg-zinc-950/40 px-3 py-2.5">
+            <p className="font-mono text-xs text-zinc-500 italic leading-5">
+              &ldquo;Understanding my newly recognized operating system&rdquo;
+            </p>
           </div>
 
           <motion.div
