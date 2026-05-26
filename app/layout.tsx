@@ -17,23 +17,32 @@ const jetBrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: 'JoshHoltz.app — Unexpected Architecture Detected',
   description:
-    'For 34 years, I assumed this system was running standard firmware. Turns out I was debugging the wrong operating system.',
+    'For 34 years I assumed this system was running standard firmware. Turns out I was debugging the wrong operating system. Full report tomorrow.',
   metadataBase: new URL('https://joshholtz.app'),
   openGraph: {
     title: 'JoshHoltz.app — Unexpected Architecture Detected',
     description:
-      'For 34 years, I assumed this system was running standard firmware. Turns out I was debugging the wrong operating system.',
+      'For 34 years I assumed this system was running standard firmware. Turns out I was debugging the wrong operating system. Full report tomorrow.',
     url: 'https://joshholtz.app',
     siteName: 'JoshHoltz.app',
     type: 'website',
     locale: 'en_US',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'JoshHoltz.app — Unexpected Architecture Detected',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'JoshHoltz.app — Unexpected Architecture Detected',
     description:
-      'For 34 years, I assumed this system was running standard firmware. Turns out I was debugging the wrong operating system.',
-    creator: '@joshholtz',
+      'Turns out I was debugging the wrong operating system. Full report tomorrow.',
+    creator: '@joshdholtz',
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
