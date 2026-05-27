@@ -70,22 +70,28 @@ export default function TeaserCard() {
             </p>
           </div>
 
-          <motion.div
-            className="mt-auto inline-flex w-fit items-center gap-2.5 rounded-md border border-amber-500/25 bg-amber-500/[0.08] px-3 py-2 sm:px-4"
+          <motion.a
+            href="https://www.joshholtz.com/blog/2026/05/27/understanding-my-newly-recognized-operating-system.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-auto flex w-full items-center justify-between gap-3 rounded-md border border-amber-500/40 bg-amber-500/[0.12] px-4 py-3 hover:border-amber-400/70 hover:bg-amber-500/[0.2] transition-all duration-200 group"
             animate={{
               boxShadow: [
                 '0 0 0px rgba(245,158,11,0)',
-                '0 0 20px rgba(245,158,11,0.18)',
+                '0 0 28px rgba(245,158,11,0.22)',
                 '0 0 0px rgba(245,158,11,0)',
               ],
             }}
             transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
           >
-            <div className="h-1.5 w-1.5 rounded-full bg-amber-400 animate-pulse" />
-            <span className="font-mono text-xs text-amber-300 tracking-wide sm:text-sm">
-              Full report — May 27, 2026
-            </span>
-          </motion.div>
+            <div className="flex items-center gap-2.5">
+              <div className="h-2 w-2 rounded-full bg-amber-400 animate-pulse" />
+              <span className="font-mono text-sm font-medium text-amber-200 tracking-wide">
+                Read the full report
+              </span>
+            </div>
+            <span className="font-mono text-base text-amber-400 group-hover:translate-x-1 transition-transform duration-200">→</span>
+          </motion.a>
         </div>
       </div>
     </motion.div>

@@ -9,6 +9,7 @@ import TeaserCard from './TeaserCard'
 import StatusBar from './StatusBar'
 import ArchitecturePanel from './ArchitecturePanel'
 import ProcessMonitor from './ProcessMonitor'
+import V2Roadmap from './V2Roadmap'
 
 interface MainDashboardProps {
   phase: AppPhase
@@ -46,6 +47,8 @@ export default function MainDashboard({ phase, onReplayBoot }: MainDashboardProp
                 <ArchitecturePanel />
               </section>
 
+              <V2Roadmap />
+
               <motion.section
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -53,10 +56,10 @@ export default function MainDashboard({ phase, onReplayBoot }: MainDashboardProp
                 className="mt-4 sm:mt-5"
               >
                 <div className="mb-3 flex items-center gap-3 sm:mb-4">
-                  <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-zinc-500">
+                  <span className="font-mono text-[11px] uppercase tracking-[0.28em] text-zinc-300">
                     Live System Metrics
                   </span>
-                  <div className="h-px flex-1 bg-zinc-800/80" />
+                  <div className="h-px flex-1 bg-zinc-700/60" />
                 </div>
                 <MetricsGrid />
               </motion.section>
